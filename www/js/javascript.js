@@ -24,6 +24,12 @@ $(document).ready(function () {
             .addClass('active')
             .siblings('.page')
             .removeClass('active');
+        $('.item-flipped')
+            .last()
+            .removeClass('item-flipped')
+            .addClass('item-active')
+            .siblings('.page-process__item')
+            .removeClass('item-active');
     }
     function nextPage() {
         console.log('nextPage')
@@ -32,6 +38,13 @@ $(document).ready(function () {
             .addClass('flipped')
             .next('.page')
             .addClass('active')
+            .siblings();
+
+        $('.item-active')
+            .removeClass('item-active')
+            .addClass('item-flipped')
+            .next('.page-process__item')
+            .addClass('item-active')
             .siblings();
     }
 
