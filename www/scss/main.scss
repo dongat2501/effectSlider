@@ -1,234 +1,4 @@
 
-// @import 'general/variables';
-// @import 'components/sidebar.scss';
-// @import 'components/header.scss';
-// @import 'components/block-content';
-// @import 'pages/login.scss';
-
-// //global class
-
-// * {
-//     padding: 0;
-//     margin: 0;
-//     box-sizing: border-box;
-// }
-
-// a {
-//     text-decoration: none;
-// }
-
-// ul, li {
-//     list-style: none;
-// }
-
-// body {
-//     background: $c-body;
-//     font-size: 15px;
-//     font-family: 'Roboto', sans-serif;
-// }
-
-// input, button, select {
-//     font-size: 15px;
-//     &:focus {
-//         outline: none;
-//     }
-// }
-
-// .flex {
-//     display: flex;
-// }
-
-// .flex-align-center {
-//     @extend .flex;
-//     align-items: center;
-// }
-
-// .flex-justify-center {
-//     @extend .flex;
-//     justify-content: center;
-// }
-
-// .flex-center {
-//     @extend .flex-align-center;
-//     @extend .flex-justify-center;
-// }
-
-// .flex-between {
-//     @extend .flex-align-center;
-//     justify-content: space-between;
-// }
-
-// .button {
-//     min-width: 180px;
-//     padding: 10px;
-//     border-radius: 30px;
-//     border: 1px solid transparent;
-//     text-align: center;
-//     color: $c-primary;
-//     font-weight: 600;
-//     background: $c-white;
-    
-// }
-
-// .button-primary {
-//     background: $c-primary;
-//     color: $c-white;
-//     transition: all 0.3s ease-in-out;
-//     &:hover {
-//         background: rgba($c-primary, 0.75);
-//     }
-// }
-
-// .button-cta {
-//     @extend .button-primary;
-//     width: auto;
-//     min-width: auto;
-//     padding: 0;
-//     margin-bottom: 8px;
-//     font-weight: 400;
-//     border: 0;
-
-// }
-
-// .bold-text {
-//     font-weight: 600;
-// }
-
-// .main-content {
-//     padding: 0 30px;
-//     flex: 1;
-//     background: $c-white;
-// }
-
-// table {
-//     width: 100%;
-//     border-collapse: collapse;
-//     tbody {
-//         border: 1px solid $c-border;
-//     }
-//     thead {
-//         border: 1px solid $c-primary;
-//     }
-//      td {
-//         padding: 12px;
-//         border-bottom: 1px solid $c-border;
-//         &:last-child {
-//             width: 30px;
-//             text-align: center;
-//         }
-//         select {
-//             height: 35px;
-//             padding: 5px 10px;
-//             border-radius: 3px;
-//         }
-//     }
-//     th {
-//         padding: 12px;
-//         background: $c-primary;
-//         color: $c-white;
-//         text-align: left;
-//         &:last-child {
-//             width: 30px;
-//         }
-//     }
-// }
-
-// .button-delete {
-//     display: inline-block;
-//     border: 0;
-//     background: transparent;
-//     color: red;
-//     transition: all 0.3s ease-in-out;
-//     i {
-//         margin: 0;
-//     }
-//      &:hover {
-//          color: rgba(red, 0.75);
-//      }
-// }
-
-// .container-checkbox {
-//   @extend .flex-align-center;
-//   position: relative;
-//   padding-left: 35px;
-//   margin-bottom: 12px;
-//   cursor: pointer;
-//   font-size: 15px;
-//   -webkit-user-select: none;
-//   -moz-user-select: none;
-//   -ms-user-select: none;
-//   user-select: none;
-// }
-
-// /* Hide the browser's default checkbox */
-// .container-checkbox input {
-//   position: absolute;
-//   opacity: 0;
-//   cursor: pointer;
-//   height: 0;
-//   width: 0;
-// }
-
-// /* Create a custom checkbox */
-// .checkmark {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   height: 25px;
-//   width: 25px;
-//   background-color: #eee;
-// }
-
-// /* On mouse-over, add a grey background color */
-// .container-checkbox:hover input ~ .checkmark {
-//   background-color: #ccc;
-// }
-
-// /* When the checkbox is checked, add a blue background */
-// .container-checkbox input:checked ~ .checkmark {
-//   background-color: #2196F3;
-// }
-
-// /* Create the checkmark/indicator (hidden when not checked) */
-// .checkmark:after {
-//   content: "";
-//   position: absolute;
-//   display: none;
-// }
-
-// /* Show the checkmark when checked */
-// .container-checkbox input:checked ~ .checkmark:after {
-//   display: block;
-// }
-
-// /* Style the checkmark/indicator */
-// .container-checkbox .checkmark:after {
-//   left: 9px;
-//   top: 5px;
-//   width: 5px;
-//   height: 10px;
-//   border: solid white;
-//   border-width: 0 3px 3px 0;
-//   -webkit-transform: rotate(45deg);
-//   -ms-transform: rotate(45deg);
-//   transform: rotate(45deg);
-// }
-
-// .warning-text {
-//     color: red;
-// }
-
-// .success-text {
-//     color: green;
-// }
-
-// .mb-10 {
-//     margin-bottom: 10px;
-// }
-
-// .hidden {
-//     display: none;
-// }
 
 html { height: 100%; overflow: hidden; }
 body { background: black; margin: 0; width: 100%; height: 100%; }
@@ -266,9 +36,16 @@ body { background: black; margin: 0; width: 100%; height: 100%; }
   -webkit-transform-origin: left center;  
   -ms-transform-origin: left center;  
   transform-origin: left center;
-  &:last-child {
+    z-index: 0;
+    opacity: 0;
+    &:last-child {
       transform: none !important;
-  }
+    }
+  
+}
+
+.page.active + .page {
+  opacity: 1;
 }
 .front,
 .back {
@@ -296,10 +73,13 @@ body { background: black; margin: 0; width: 100%; height: 100%; }
 
 .page.active {
   z-index: 1;
+  opacity: 1;
 }
 .page.flipped {
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
+  z-index: 2;
+  opacity: 1;
 }
 .page.flipped:last-of-type {
   z-index: 1;
@@ -322,19 +102,19 @@ p {
   }
 }
 
-.page.flipped {
-    z-index: 2;
-}
+// .page.flipped {
+//     z-index: 2;
+// }
 
-.page.active .front {
-    max-height: 640px;
-    height: 640px;
-    overflow-y: auto;
-    z-index: 3;
-    &::-webkit-scrollbar {
-      width: 0;
-    }
-}
+// .page.active .front {
+//     max-height: 640px;
+//     height: 640px;
+//     overflow-y: auto;
+//     z-index: 3;
+//     &::-webkit-scrollbar {
+//       width: 0;
+//     }
+// }
 
 
 .page-process__list {
